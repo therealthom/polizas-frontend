@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Obtener datos</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        header {
+            background-color: #dc3545;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        #dropArea {
+            border: 2px dashed #ccc;
+        }
+
+        .dropMessage {
+            margin-bottom: 10px;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        .container-fluid {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        footer {
+            background-color: #dc3545;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <header class="text-white py-2">
+        <div class="container d-flex align-items-center">
+            <span class="logo mr-3">ASF</span>
+            <h1 class="h4 m-0">P&oacute;lizas de Egresos</h1>
+        </div>
+    </header>
+
+    <div class="content container mt-4">
+        <div class="row">
+            <div class="col-md-3">
+                <aside>
+                    <nav class="nav flex-column">
+                        <a class="nav-link" href="init.html">Inicio</a>
+                        <a class="nav-link" href="cargar-archivos.html">Cargar p&oacute;lizas</a>
+                        <a class="nav-link" href="obtener-datos.html">Obtener datos</a>
+                        <a class="nav-link" href="generar-reporte.html">Generar reporte</a>
+                        <br/>
+                        <a class="nav-link" href="index.html">Cerrar sesi&oacute;n</a>
+                    </nav>
+                </aside>
+            </div>
+            <div class="col-md-9">
+                <main>
+                    <h4>P&oacute;lizas disponibles</h4>
+                    <br/>
+                    <ul id="result"></ul>
+                    <br/>
+                    <button id="getDataButton" class="btn btn-primary mx-auto d-block">Procesar</button>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Nuuptech - 2023 - Todos los derechos reservados</p>
+        </div>
+    </footer>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="static/getdata.js"></script>
+</body>
+</html>
